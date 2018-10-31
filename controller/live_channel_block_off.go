@@ -2,7 +2,6 @@ package controller
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 	"runtime"
 	"sort"
@@ -18,7 +17,7 @@ import (
 
 type IDs struct {
 	ID          string `binding:"required" form:"id" json:"id"`
-	OperateType string `binding:"required" form:"operateType" json:"operateType"`
+	OperateType string `binding:"required" form:"operate_type" json:"operate_type"`
 	AreaIDs     []int  `binding:"required" form:"area_ids" json:"area_ids"`
 }
 
@@ -35,7 +34,7 @@ func PostLiveChannelBlockOff(c *gin.Context) {
 
 	if (operateType != "block_off") && (operateType != "deblock") {
 		// Display JSON error
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "operateType: " + operateType + " 未定义，请修改操作类型"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "operate_type: " + operateType + " 未定义，请修改操作类型"})
 		return
 	}
 
@@ -78,13 +77,12 @@ func PostLiveChannelBlockOff(c *gin.Context) {
 		if runtime.GOOS != "windows" {
 			blockOffScriptFilepath := config.Cfg["block_off_script_filepath"].(string)
 			command := blockOffScriptFilepath + " " + liveChannel.OutflowIP
-			commandResult, err := utils.ExecuteAndGetResultCombineError(command)
+			_, err := utils.ExecuteAndGetResultCombineError(command)
 			if err != nil {
 				// Display JSON error
 				c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 				return
 			}
-			log.Println("Execute Return: ", commandResult)
 			/* if !strings.Contains(commandResult, "OK") {
 				// Display JSON error
 				c.JSON(http.StatusInternalServerError, gin.H{"error": "Execute Return：" + commandResult})
@@ -105,13 +103,12 @@ func PostLiveChannelBlockOff(c *gin.Context) {
 		if runtime.GOOS != "windows" {
 			deblockScriptFilepath := config.Cfg["deblock_script_filepath"].(string)
 			command := deblockScriptFilepath + " " + liveChannel.OutflowIP
-			commandResult, err := utils.ExecuteAndGetResultCombineError(command)
+			_, err := utils.ExecuteAndGetResultCombineError(command)
 			if err != nil {
 				// Display JSON error
 				c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 				return
 			}
-			log.Println("Execute Return: ", commandResult)
 			/* if !strings.Contains(commandResult, "OK") {
 				// Display JSON error
 				c.JSON(http.StatusInternalServerError, gin.H{"error": "Execute Return：" + commandResult})

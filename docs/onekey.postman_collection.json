@@ -15,12 +15,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/live_channels/CCTV",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/live_channels/CCTV",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"live_channels",
@@ -47,12 +45,10 @@
 					"raw": "{\n\t\"id\": \"239.77.1.240\",\n\t\"area_ids\": [2, 3, 4, 5, 6, 7, 8, 9],\n\t\"operate_type\": \"block_off\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/live_channel_block_off",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/live_channel_block_off",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"live_channel_block_off"
@@ -71,12 +67,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/live_channels/?id=%e4%bd%93%e8%82%b2",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/live_channels/?id=%e4%bd%93%e8%82%b2",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"live_channels",
@@ -102,12 +96,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/live_channel_logs?area_id=1&id=admin&start_time=2018-10-25&end_time=2018-10-28",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/live_channel_logs?area_id=1&id=admin&start_time=2018-10-25&end_time=2018-10-28",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"live_channel_logs"
@@ -151,12 +143,10 @@
 					"raw": "{\n\t\"id\": \"239.77.1.240\",\n\t\"area_ids\": [2, 3, 4, 5],\n\t\"operate_type\": \"deblock\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/live_channel_block_off",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/live_channel_block_off",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"live_channel_block_off"
@@ -196,6 +186,14 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6c240dd3-66b6-4da6-89d7-bcb6d741278e",
+			"key": "baseurl",
+			"value": "http://125.88.102.18:8888",
+			"type": "string"
 		}
 	]
 }

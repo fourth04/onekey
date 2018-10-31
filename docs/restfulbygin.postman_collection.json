@@ -21,12 +21,10 @@
 					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"123456Qw!\",\n\t\"rate_formatted\": \"10000-M\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/users",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/users",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"users"
@@ -51,12 +49,10 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/users/1",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/users/1",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"users",
@@ -85,12 +81,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/myself",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/myself",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"myself"
@@ -114,12 +108,10 @@
 					"raw": "{\n\t\"old_password\": \"123456Qw!Q\",\n\t\"new_password\": \"123456Qw!\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/myself",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/myself",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"myself"
@@ -135,12 +127,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/users",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/users",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"users"
@@ -164,12 +154,10 @@
 					"raw": "{\n\t\"username\": \"test\",\n\t\"password\": \"123456Qw!\",\n\t\"role_ids\": [2],\n\t\"rate_formatted\": \"30000-H\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/users/2",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/users/2",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"users",
@@ -196,12 +184,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/users/2",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/users/2",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"users",
@@ -226,12 +212,10 @@
 					"raw": "{\n\t\"permission_type_name\": \"backend_path\",\n\t\"permission_type_label\": \"后端路径\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/permission_types",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permission_types",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permission_types"
@@ -247,12 +231,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/permission_types/1",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permission_types/1",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permission_types",
@@ -278,12 +260,10 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/permission_types/2",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permission_types/2",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permission_types",
@@ -300,12 +280,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/permission_types",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permission_types",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permission_types"
@@ -329,12 +307,10 @@
 					"raw": "{\n\t\"permission_type_name\": \"frontend_url\",\n\t\"permission_type_label\": \"前段路径\",\n\t\"operation_ids\": [1],\n\t\"resource_ids\":[1,2]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/permission_types/2",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permission_types/2",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permission_types",
@@ -359,12 +335,10 @@
 					"raw": "{\n\t\"operation_name\": \"POST\",\n\t\"operation_label\": \"POST访问\",\n\t\"permission_type_id\":1 \n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/operations",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/operations",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"operations"
@@ -388,12 +362,10 @@
 					"raw": "{\n\t\"operation_name\": \"POST\",\n\t\"operation_label\": \"POST访问\",\n\t\"permission_type_id\":1 \n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/operations/POST",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/operations/POST",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"operations",
@@ -418,12 +390,10 @@
 					"raw": "{\n\t\"resource_name\": \"/api/resource\",\n\t\"resource_label\": \"新增资源\",\n\t\"permission_type_id\": 1\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/resources",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/resources",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"resources"
@@ -447,12 +417,10 @@
 					"raw": "{\n\t\"operation_name\": \"POST\",\n\t\"operation_label\": \"POST访问\",\n\t\"permission_type_id\":1 \n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/resources",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/resources",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"resources"
@@ -476,12 +444,10 @@
 					"raw": "{\n\t\"permission_type_id\": 1,\n\t\"operation_id\": 1,\n\t\"resource_id\": 1\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/permissions4resource",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permissions4resource",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permissions4resource"
@@ -505,12 +471,10 @@
 					"raw": "{\n\t\"permission_type_id\": 1,\n\t\"operation_id\": 1,\n\t\"resource_id\": 1\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/roles/2",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/roles/2",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"roles",
@@ -535,12 +499,10 @@
 					"raw": "{\n\t\"role_name\": \"admin\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/roles",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/roles",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"roles"
@@ -567,12 +529,10 @@
 					"raw": "{\n\t\"role_name\": \"test\",\n\t\"permission_ids\": [1,2]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/roles/2",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/roles/2",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"roles",
@@ -598,12 +558,10 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/permissions/1",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permissions/1",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permissions",
@@ -629,12 +587,10 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/permissions",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permissions",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permissions"
@@ -661,12 +617,10 @@
 					"raw": "{\n\t\"permission_type_id\": 6,\n\t\"operation_id\": 1,\n\t\"resource_id\": 1\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/permissions/1",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/permissions/1",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"permissions",
@@ -715,12 +669,10 @@
 					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"123456Qw!\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/auth/login",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/auth/login",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"auth",
@@ -737,12 +689,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/auth/refresh_token",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/auth/refresh_token",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"auth",
@@ -762,12 +712,10 @@
 					"raw": "{\n  \"username\": \"foobar\",\n  \"password\": \"foobar\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/auth/hello",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/auth/hello",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"auth",
@@ -789,12 +737,10 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8080/api/evils?uri=www.bidu.com",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/evils?uri=www.bidu.com",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"evils"
@@ -824,12 +770,10 @@
 					"raw": "{\n\t\"uris\":[\"www.baidu.com\", \"www.qq.com\"]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/evils",
-					"protocol": "http",
+					"raw": "{{baseurl}}/api/evils",
 					"host": [
-						"localhost"
+						"{{baseurl}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"evils"
@@ -869,6 +813,14 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6c240dd3-66b6-4da6-89d7-bcb6d741278e",
+			"key": "baseurl",
+			"value": "http://125.88.102.18:8888",
+			"type": "string"
 		}
 	]
 }
