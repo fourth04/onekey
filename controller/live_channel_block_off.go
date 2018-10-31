@@ -76,7 +76,8 @@ func PostLiveChannelBlockOff(c *gin.Context) {
 
 		if runtime.GOOS != "windows" {
 			blockOffScriptFilepath := config.Cfg["block_off_script_filepath"].(string)
-			command := blockOffScriptFilepath + " " + liveChannel.OutflowIP
+			// command := blockOffScriptFilepath + " " + liveChannel.OutflowIP
+			command := blockOffScriptFilepath + " 14.29.6.134"
 			_, err := utils.ExecuteAndGetResultCombineError(command)
 			if err != nil {
 				// Display JSON error
@@ -102,7 +103,8 @@ func PostLiveChannelBlockOff(c *gin.Context) {
 
 		if runtime.GOOS != "windows" {
 			deblockScriptFilepath := config.Cfg["deblock_script_filepath"].(string)
-			command := deblockScriptFilepath + " " + liveChannel.OutflowIP
+			// command := deblockScriptFilepath + " " + liveChannel.OutflowIP
+			command := deblockScriptFilepath + " 14.29.6.134"
 			_, err := utils.ExecuteAndGetResultCombineError(command)
 			if err != nil {
 				// Display JSON error
