@@ -2,7 +2,7 @@
     "running_log_filepath": "running.log",
     "httpserver_log_filepath": "httpserver.log",
     "dialect": "mysql",
-    "db_path": "epg:Epg@)18@tcp(125.88.102.18:3306)/epg?charset=utf8&parseTime=True&loc=Local",
+    "db_path": "username:password@tcp(127.0.0.1:3306)/test?charset=utf8&parseTime=True&loc=Local",
     "db_log_mode": true,
     "jwt_realm": "test zone",
     "jwt_key": "secret key",
