@@ -1,0 +1,874 @@
+{
+	"info": {
+		"_postman_id": "e8c20e03-c7fa-4831-8d3f-b903263fd8e5",
+		"name": "restfulbygin",
+		"description": "restful by gin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "新增用户",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"123456Qw!\",\n\t\"rate_formatted\": \"10000-M\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据ID获取用户",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDcmVhdGVkQXQiOiIwMDAxLTAxLTAxVDA3OjM2OjQyKzA3OjM2IiwiSUQiOjEsIlJhdGVGb3JtYXR0ZWQiOiIzMDAwMC1IIiwiUm9sZU5hbWUiOiJhZG1pbiIsIlVwZGF0ZWRBdCI6IjIwMTgtMDctMDZUMTI6NTQ6MDQuNTU0MTM2KzA4OjAwIiwiVXNlcm5hbWUiOiJmb29iYXIiLCJleHAiOjE1MzA4Njk5ODEsImlkIjoiZm9vYmFyIiwib3JpZ19pYXQiOjE1MzA4NjI3ODF9.9z6YE82cBUh0fVETpu1nZMU5i_mzaJXjuIEBJHIhS1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取本人的用户信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDcmVhdGVkQXQiOiIwMDAxLTAxLTAxVDA3OjM2OjQyKzA3OjM2IiwiSUQiOjEsIlJhdGVGb3JtYXR0ZWQiOiIzMDAwMC1IIiwiUm9sZU5hbWUiOiJhZG1pbiIsIlVwZGF0ZWRBdCI6IjIwMTgtMDctMDZUMTI6NTQ6MDQuNTU0MTM2KzA4OjAwIiwiVXNlcm5hbWUiOiJmb29iYXIiLCJleHAiOjE1MzA4Njk5ODEsImlkIjoiZm9vYmFyIiwib3JpZ19pYXQiOjE1MzA4NjI3ODF9.9z6YE82cBUh0fVETpu1nZMU5i_mzaJXjuIEBJHIhS1Y"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/myself",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"myself"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新本人的用户密码",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"old_password\": \"123456Qw!Q\",\n\t\"new_password\": \"123456Qw!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/myself",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"myself"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取所有用户",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新用户",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"test\",\n\t\"password\": \"123456Qw!\",\n\t\"role_ids\": [2],\n\t\"rate_formatted\": \"30000-H\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除用户",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDcmVhdGVkQXQiOiIyMDE4LTA3LTA3VDEwOjQ4OjE3LjM1MTUwOCswODowMCIsIklEIjoxLCJSYXRlRm9ybWF0dGVkIjoiMTAwMDAtTSIsIlJvbGVOYW1lIjoiYWRtaW4iLCJVcGRhdGVkQXQiOiIyMDE4LTA3LTA3VDEwOjQ4OjE3LjM1MTUwOCswODowMCIsIlVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE1MzEwMjYxMTUsImlkIjoiYWRtaW4iLCJvcmlnX2lhdCI6MTUzMTAxODkxNX0.Lt1ouXhPL3-IXCrhTzfuir-7fx0bkuRqQ8els0VAOnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增权限类型",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"permission_type_name\": \"backend_path\",\n\t\"permission_type_label\": \"后端路径\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/permission_types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permission_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除权限类型",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/permission_types/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permission_types",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据ID获取权限类型",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDcmVhdGVkQXQiOiIwMDAxLTAxLTAxVDA3OjM2OjQyKzA3OjM2IiwiSUQiOjEsIlJhdGVGb3JtYXR0ZWQiOiIzMDAwMC1IIiwiUm9sZU5hbWUiOiJhZG1pbiIsIlVwZGF0ZWRBdCI6IjIwMTgtMDctMDZUMTI6NTQ6MDQuNTU0MTM2KzA4OjAwIiwiVXNlcm5hbWUiOiJmb29iYXIiLCJleHAiOjE1MzA4Njk5ODEsImlkIjoiZm9vYmFyIiwib3JpZ19pYXQiOjE1MzA4NjI3ODF9.9z6YE82cBUh0fVETpu1nZMU5i_mzaJXjuIEBJHIhS1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/permission_types/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permission_types",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取所有权限类型",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/permission_types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permission_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新权限类型",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"permission_type_name\": \"frontend_url\",\n\t\"permission_type_label\": \"前段路径\",\n\t\"operation_ids\": [1],\n\t\"resource_ids\":[1,2]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/permission_types/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permission_types",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增功能操作",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operation_name\": \"POST\",\n\t\"operation_label\": \"POST访问\",\n\t\"permission_type_id\":1 \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/operations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据ID获取功能操作",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operation_name\": \"POST\",\n\t\"operation_label\": \"POST访问\",\n\t\"permission_type_id\":1 \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/operations/POST",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"operations",
+						"POST"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增资源",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"resource_name\": \"/api/resource\",\n\t\"resource_label\": \"新增资源\",\n\t\"permission_type_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据ID获取资源",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operation_name\": \"POST\",\n\t\"operation_label\": \"POST访问\",\n\t\"permission_type_id\":1 \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增权限",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"permission_type_id\": 1,\n\t\"operation_id\": 1,\n\t\"resource_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/permissions4resource",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions4resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据ID获取角色",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"permission_type_id\": 1,\n\t\"operation_id\": 1,\n\t\"resource_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增角色",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role_name\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新角色",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role_name\": \"test\",\n\t\"permission_ids\": [1,2]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据ID获取权限",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDcmVhdGVkQXQiOiIwMDAxLTAxLTAxVDA3OjM2OjQyKzA3OjM2IiwiSUQiOjEsIlJhdGVGb3JtYXR0ZWQiOiIzMDAwMC1IIiwiUm9sZU5hbWUiOiJhZG1pbiIsIlVwZGF0ZWRBdCI6IjIwMTgtMDctMDZUMTI6NTQ6MDQuNTU0MTM2KzA4OjAwIiwiVXNlcm5hbWUiOiJmb29iYXIiLCJleHAiOjE1MzA4Njk5ODEsImlkIjoiZm9vYmFyIiwib3JpZ19pYXQiOjE1MzA4NjI3ODF9.9z6YE82cBUh0fVETpu1nZMU5i_mzaJXjuIEBJHIhS1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/permissions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取所有权限",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJDcmVhdGVkQXQiOiIwMDAxLTAxLTAxVDA3OjM2OjQyKzA3OjM2IiwiSUQiOjEsIlJhdGVGb3JtYXR0ZWQiOiIzMDAwMC1IIiwiUm9sZU5hbWUiOiJhZG1pbiIsIlVwZGF0ZWRBdCI6IjIwMTgtMDctMDZUMTI6NTQ6MDQuNTU0MTM2KzA4OjAwIiwiVXNlcm5hbWUiOiJmb29iYXIiLCJleHAiOjE1MzA4Njk5ODEsImlkIjoiZm9vYmFyIiwib3JpZ19pYXQiOjE1MzA4NjI3ODF9.9z6YE82cBUh0fVETpu1nZMU5i_mzaJXjuIEBJHIhS1Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/permissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新权限",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"permission_type_id\": 6,\n\t\"operation_id\": 1,\n\t\"resource_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/permissions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取JWT",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456Qw!",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"123456Qw!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刷新JWT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/refresh_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"refresh_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "测试jwt从context获取claims的能力",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"foobar\",\n  \"password\": \"foobar\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询单个域名",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "foobar.com"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/evils?uri=www.bidu.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"evils"
+					],
+					"query": [
+						{
+							"key": "uri",
+							"value": "www.bidu.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询多个域名",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uris\":[\"www.baidu.com\", \"www.qq.com\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/evils",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"evils"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoiMjAxOC0xMC0yNVQwMTozNjoxOVoiLCJleHAiOjE1NDA4NzA1MTIsImlkIjoxLCJvcmlnX2lhdCI6MTU0MDc4NDExMiwicmF0ZV9mb3JtYXR0ZWQiOiI5OTk5LU0iLCJyb2xlcyI6W3sicGVybWlzc2lvbnMiOlt7Im9wZXJhdGlvbl9sYWJlbCI6IuaWsOWiniIsIm9wZXJhdGlvbl9uYW1lIjoiYWRkIiwicGVybWlzc2lvbl90eXBlX2xhYmVsIjoi6YCa55So5p2D6ZmQ57G75Z6LIiwicGVybWlzc2lvbl90eXBlX25hbWUiOiJyZXNvdXJjZSIsInJlc291cmNlX2xhYmVsIjoi6YCa55So6LWE5rqQIiwicmVzb3VyY2VfbmFtZSI6InJlc291cmNlIn0seyJvcGVyYXRpb25fbGFiZWwiOiLliKDpmaQiLCJvcGVyYXRpb25fbmFtZSI6ImRlbCIsInBlcm1pc3Npb25fdHlwZV9sYWJlbCI6IumAmueUqOadg-mZkOexu-WeiyIsInBlcm1pc3Npb25fdHlwZV9uYW1lIjoicmVzb3VyY2UiLCJyZXNvdXJjZV9sYWJlbCI6IumAmueUqOi1hOa6kCIsInJlc291cmNlX25hbWUiOiJyZXNvdXJjZSJ9LHsib3BlcmF0aW9uX2xhYmVsIjoi5L-u5pS5Iiwib3BlcmF0aW9uX25hbWUiOiJlZGl0IiwicGVybWlzc2lvbl90eXBlX2xhYmVsIjoi6YCa55So5p2D6ZmQ57G75Z6LIiwicGVybWlzc2lvbl90eXBlX25hbWUiOiJyZXNvdXJjZSIsInJlc291cmNlX2xhYmVsIjoi6YCa55So6LWE5rqQIiwicmVzb3VyY2VfbmFtZSI6InJlc291cmNlIn0seyJvcGVyYXRpb25fbGFiZWwiOiLmn6XnnIsiLCJvcGVyYXRpb25fbmFtZSI6InZpZXciLCJwZXJtaXNzaW9uX3R5cGVfbGFiZWwiOiLpgJrnlKjmnYPpmZDnsbvlnosiLCJwZXJtaXNzaW9uX3R5cGVfbmFtZSI6InJlc291cmNlIiwicmVzb3VyY2VfbGFiZWwiOiLpgJrnlKjotYTmupAiLCJyZXNvdXJjZV9uYW1lIjoicmVzb3VyY2UifV0sInJvbGVfbGFiZWwiOiLnrqHnkIblkZgiLCJyb2xlX25hbWUiOiJhZG1pbiJ9XSwidXBkYXRlZF9hdCI6IjIwMTgtMTAtMjVUMDE6MzY6MTlaIiwidXNlcm5hbWUiOiJhZG1pbiJ9.LluXg_pyHTrzddYkveNhTyI55CnMG1iFK4gKJupyHJU",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b6452ecb-25cf-44e3-a290-5361b2b79035",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5a0c7393-2fed-4fe9-a643-24fd40f913a9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

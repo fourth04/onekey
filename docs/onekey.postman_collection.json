@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "0eb92796-be45-4998-81af-f1ce85da32b8",
+		"name": "onekey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "根据ID获取直播频道",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/live_channels/CCTV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"live_channels",
+						"CCTV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "单一频道封堵",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"239.77.1.240\",\n\t\"area_ids\": [2, 3, 4, 5, 6, 7, 8, 9],\n\t\"operate_type\": \"block_off\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/live_channel_block_off",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"live_channel_block_off"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取所有直播频道",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/live_channels/?id=%e4%bd%93%e8%82%b2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"live_channels",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "%e4%bd%93%e8%82%b2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取所有封堵日志",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/live_channel_logs?area_id=1&id=admin&start_time=2018-10-25&end_time=2018-10-28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"live_channel_logs"
+					],
+					"query": [
+						{
+							"key": "area_id",
+							"value": "1"
+						},
+						{
+							"key": "id",
+							"value": "admin"
+						},
+						{
+							"key": "start_time",
+							"value": "2018-10-25"
+						},
+						{
+							"key": "end_time",
+							"value": "2018-10-28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "单一频道解封",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"239.77.1.240\",\n\t\"area_ids\": [2, 3, 4, 5],\n\t\"operate_type\": \"deblock\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/live_channel_block_off",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"live_channel_block_off"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVkX2F0IjoiMjAxOC0xMC0yNVQwMTozNjoxOVoiLCJleHAiOjE1NDA4NzA1MTIsImlkIjoxLCJvcmlnX2lhdCI6MTU0MDc4NDExMiwicmF0ZV9mb3JtYXR0ZWQiOiI5OTk5LU0iLCJyb2xlcyI6W3sicGVybWlzc2lvbnMiOlt7Im9wZXJhdGlvbl9sYWJlbCI6IuaWsOWiniIsIm9wZXJhdGlvbl9uYW1lIjoiYWRkIiwicGVybWlzc2lvbl90eXBlX2xhYmVsIjoi6YCa55So5p2D6ZmQ57G75Z6LIiwicGVybWlzc2lvbl90eXBlX25hbWUiOiJyZXNvdXJjZSIsInJlc291cmNlX2xhYmVsIjoi6YCa55So6LWE5rqQIiwicmVzb3VyY2VfbmFtZSI6InJlc291cmNlIn0seyJvcGVyYXRpb25fbGFiZWwiOiLliKDpmaQiLCJvcGVyYXRpb25fbmFtZSI6ImRlbCIsInBlcm1pc3Npb25fdHlwZV9sYWJlbCI6IumAmueUqOadg-mZkOexu-WeiyIsInBlcm1pc3Npb25fdHlwZV9uYW1lIjoicmVzb3VyY2UiLCJyZXNvdXJjZV9sYWJlbCI6IumAmueUqOi1hOa6kCIsInJlc291cmNlX25hbWUiOiJyZXNvdXJjZSJ9LHsib3BlcmF0aW9uX2xhYmVsIjoi5L-u5pS5Iiwib3BlcmF0aW9uX25hbWUiOiJlZGl0IiwicGVybWlzc2lvbl90eXBlX2xhYmVsIjoi6YCa55So5p2D6ZmQ57G75Z6LIiwicGVybWlzc2lvbl90eXBlX25hbWUiOiJyZXNvdXJjZSIsInJlc291cmNlX2xhYmVsIjoi6YCa55So6LWE5rqQIiwicmVzb3VyY2VfbmFtZSI6InJlc291cmNlIn0seyJvcGVyYXRpb25fbGFiZWwiOiLmn6XnnIsiLCJvcGVyYXRpb25fbmFtZSI6InZpZXciLCJwZXJtaXNzaW9uX3R5cGVfbGFiZWwiOiLpgJrnlKjmnYPpmZDnsbvlnosiLCJwZXJtaXNzaW9uX3R5cGVfbmFtZSI6InJlc291cmNlIiwicmVzb3VyY2VfbGFiZWwiOiLpgJrnlKjotYTmupAiLCJyZXNvdXJjZV9uYW1lIjoicmVzb3VyY2UifV0sInJvbGVfbGFiZWwiOiLnrqHnkIblkZgiLCJyb2xlX25hbWUiOiJhZG1pbiJ9XSwidXBkYXRlZF9hdCI6IjIwMTgtMTAtMjVUMDE6MzY6MTlaIiwidXNlcm5hbWUiOiJhZG1pbiJ9.LluXg_pyHTrzddYkveNhTyI55CnMG1iFK4gKJupyHJU",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "42cf8607-969e-4b5a-8e10-5bcb7a6dea17",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "830321fb-9bd3-4b3b-89c3-34951a2aaf94",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

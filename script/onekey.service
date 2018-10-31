@@ -1,0 +1,16 @@
+[Unit]
+Description=RESTFUL API BY GIN
+After=network.target
+
+[Service]
+Type=simple
+
+Restart=on-failure
+RestartSec=10
+
+WorkingDirectory=/home/gdgyy
+ExecStartPre=export GIN_MODE=release
+ExecStart=/home/gopath/bin/restfulbygin -c config.json
+
+[Install]
+WantedBy=multi-user.target

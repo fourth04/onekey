@@ -1,0 +1,16 @@
+{
+    "running_log_filepath": "running.log",
+    "httpserver_log_filepath": "httpserver.log",
+    "dialect": "sqlite3",
+    "db_path": "./onekey.db",
+    "db_log_mode": true,
+    "jwt_realm": "test zone",
+    "jwt_key": "secret key",
+    "jwt_timeout": "24h",
+    "jwt_max_refresh": "6h",
+    "uri": ":8080",
+    "static_dir": "dist/assets",
+    "index_filepath": "dist/index.html",
+    "block_off_script_filepath": "./hmsstop.sh",
+    "deblock_script_filepath": "./hmsstart.sh"
+}

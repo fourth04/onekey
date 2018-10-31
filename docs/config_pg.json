@@ -1,0 +1,16 @@
+{
+    "running_log_filepath": "running.log",
+    "httpserver_log_filepath": "httpserver.log",
+    "dialect": "postgres",
+    "db_path": "user=gdgyy password=123456Qw! dbname=onekey sslmode=disable",
+    "db_log_mode": true,
+    "jwt_realm": "test zone",
+    "jwt_key": "secret key",
+    "jwt_timeout": "24h",
+    "jwt_max_refresh": "6h",
+    "uri": ":8080",
+    "static_dir": "dist/dist",
+    "index_filepath": "dist/index.html",
+    "block_off_script_filepath": "./hmsstop.sh",
+    "deblock_script_filepath": "./hmsstart.sh"
+}
